@@ -8,7 +8,7 @@ import { FaEnvelope } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { IoBookmarkSharp } from "react-icons/io5";
 import { Icons } from "next/dist/lib/metadata/types/metadata-types";
-
+import FeedCard from "@/components/FeedCard";
 
 const inter = Inter({subsets: ['latin'] });
 
@@ -71,7 +71,14 @@ export default function Home() {
         </div> 
         
 
-        <div className="col-span-6 border-r-[1px] border-l-[1px] border-gray"></div>
+        <div className="col-span-6 border-r-[1px] border-l-[1px] border border-gray-600">
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+        </div>
+        
         <div className="col-span-3"></div>
       </div>
     </div>

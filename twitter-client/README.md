@@ -13,6 +13,18 @@ yarn dev (to start server)
 
 Update index.tsx. The page auto-updates as you edit the file.
 
+#Built Menu bar of he website.
+
+#Then built feedcard in middle
+- components/FeedCard - index.tsx
+- Make sure to give iamge host name in next.config.ts
+
+
+
+
+
+
+
 
 
 
