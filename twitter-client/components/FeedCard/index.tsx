@@ -1,5 +1,8 @@
 import React from 'react';
 import Image from 'next/image'
+import { LuMessageCircle } from 'react-icons/lu';
+import { FaRegHeart, FaRetweet } from 'react-icons/fa6';
+import { MdOutlineFileUpload } from 'react-icons/md';
 
 const FeedCard: React.FC = () => {
     return (
@@ -19,6 +22,21 @@ const FeedCard: React.FC = () => {
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
+                <div className="flex justify-between mt-5 text-xl items-center p-2 w-[90%]">
+                    <div>
+                        <LuMessageCircle />
+                    </div>
+                    <div>
+                        <FaRetweet />
+                    </div>
+                    <div>
+                        <FaRegHeart />
+                    </div>
+                    <div>
+                        <MdOutlineFileUpload />
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </div>

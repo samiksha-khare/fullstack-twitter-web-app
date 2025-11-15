@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaMoneyBill, FaXTwitter } from "react-icons/fa6";
 import { FaHome } from "react-icons/fa";
 import { FaHashtag } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { FaUser } from "react-icons/fa";
 import { IoBookmarkSharp } from "react-icons/io5";
 import { Icons } from "next/dist/lib/metadata/types/metadata-types";
 import FeedCard from "@/components/FeedCard";
+import { PiDotsThreeCircleFill } from "react-icons/pi";
 
 const inter = Inter({subsets: ['latin'] });
 
@@ -35,12 +36,20 @@ const sideMenu: TwitterSideMenu[] = [
     icon: <IoBookmarkSharp />
   },
   {
+    title: "Twitter Blue",
+    icon: <FaMoneyBill />
+  },
+  {
     title: "Messages",
     icon: <FaEnvelope />
   },
   {
     title: "Profile",
     icon: <FaUser />
+  },
+  {
+    title: "More Options",
+    icon: <PiDotsThreeCircleFill />
   }
 ] 
 
@@ -52,7 +61,7 @@ export default function Home() {
         <div className="col-span-3 pt-3">
           <FaXTwitter className="text-5xl hover:bg-gray-600 rounded-full p-2 cursor-pointer transition-all"/> 
         
-          <div className="mt-4 text-2xl font-bold pr-5">
+          <div className="mt-4 text-xl font-bold pr-5">
             <ul>
               {sideMenu.map((item) => (
                 <li className="flex justify-start items-center gap-4 hover:bg-gray-600 rounded-lg px-3 py-4 w-fit cursor-pointer" 
@@ -63,7 +72,7 @@ export default function Home() {
               ))}
             </ul>
             <div className="mt-5 px-3">
-              <button className="bg-[#1d9bf0] p-4 font-semibold rounded-full w-full">Tweet</button>
+              <button className="bg-[#1d9bf0] p-3 font-semibold rounded-full w-full">Tweet</button>
             </div>
 
           </div>
@@ -71,7 +80,13 @@ export default function Home() {
         </div> 
         
 
-        <div className="col-span-6 border-r-[1px] border-l-[1px] border border-gray-600">
+        <div className="col-span-5 border-r-[1px] border-l-[1px] h-screen overflow-scroll border-gray-600">
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
+          <FeedCard></FeedCard>
           <FeedCard></FeedCard>
           <FeedCard></FeedCard>
           <FeedCard></FeedCard>
